@@ -5,11 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo | Lista de tarefas</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
   <body>
 
     <main>
-      <h1>START</h1>
+      <h1>Lista de tarefas</h1>
+
+      <form>
+        <input type="text" placeholder="Fazer compras..." autocomplete="off" required />
+        <input type="submit" class="btn" value="Adicionar" />
+      </form>
+
+      <div class="tasks">
+        <ul>
+          <li>
+            <span>Teste</span>
+            <span class="material-icons">radio_button_unchecked</span>
+          </li>
+        </ul>
+      </div>
     </main>
 
   </body>
