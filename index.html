@@ -13,20 +13,17 @@
     <main>
       <h1>Lista de tarefas</h1>
 
-      <form>
-        <input type="text" placeholder="Fazer compras..." autocomplete="off" required />
+      <form id="form">
+        <input type="text" id="task" placeholder="Fazer compras..." autocomplete="off" required />
         <input type="submit" class="btn" value="Adicionar" />
       </form>
 
       <div class="tasks">
-        <ul>
-          <li>
-            <span>Teste</span>
-            <span class="material-icons">radio_button_unchecked</span>
-          </li>
-        </ul>
+        <ul id="ul-tasks"></ul>
       </div>
     </main>
+
+    <script src="/js/index.js"></script>
 
   </body>
 </html>
