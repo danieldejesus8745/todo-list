@@ -34,9 +34,8 @@ const loadTasks = () => {
     const spanIcon = document.createElement('span');
 
     spanTask.textContent = task.task;
-    spanIcon.textContent = 'radio_button_unchecked';
 
-    spanIcon.classList.add('material-icons');
+    spanIcon.classList.add('check-icon');
 
     li.append(spanTask, spanIcon);
     ulTasks.append(li);

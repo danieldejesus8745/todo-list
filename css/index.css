@@ -36,6 +36,7 @@ input {
   border: 2px solid lightgray;
   font-size: 12pt;
   margin-top: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 input:focus {
@@ -73,9 +74,18 @@ li {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--color-one);
+  margin: 10px;
 }
 
-.material-icons {
+.check-icon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-one);
+  border-radius: 50px;
   cursor: pointer;
-  color: var(--color-one);
+  transition: all .2s;
+}
+
+.check-icon:hover {
+  background-color: var(--color-one);
 }
