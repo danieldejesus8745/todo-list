@@ -25,20 +25,42 @@ form.addEventListener('submit', e => {
   sendTaskObject(taskObject);
 });
 
+const updateTasks = () => {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  loadTasks();
+}
+
+const deleteTask = id => {
+  tasks = tasks.map(task => {
+    if (task.id === id) {
+      task.status = 'completed';
+    }
+
+    return task;
+  });
+
+  updateTasks();
+}
+
 const loadTasks = () => {
   ulTasks.textContent = '';
 
   tasks.map(task => {
-    const li = document.createElement('li');
-    const spanTask = document.createElement('span');
-    const spanIcon = document.createElement('span');
+    if (task.status === 'pending') {
+      const li = document.createElement('li');
+      const spanTask = document.createElement('span');
+      const spanIcon = document.createElement('span');
 
-    spanTask.textContent = task.task;
+      spanTask.textContent = task.task;
 
-    spanIcon.classList.add('check-icon');
+      spanIcon.setAttribute('onclick', `deleteTask(${task.id})`);
 
-    li.append(spanTask, spanIcon);
-    ulTasks.append(li);
+      spanIcon.classList.add('check-icon');
+
+      li.append(spanTask, spanIcon);
+      ulTasks.append(li);
+    }
   });
 }
 
