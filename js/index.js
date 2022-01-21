@@ -2,6 +2,7 @@ const form = document.querySelector('#form');
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 let id = localStorage.getItem('id') || 1;
 const ulTasks = document.querySelector('#ul-tasks');
+const taskInput = document.querySelector('#task');
 
 const sendTaskObject = taskObject => {
   taskObject.id = id;
@@ -10,6 +11,7 @@ const sendTaskObject = taskObject => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
   localStorage.setItem('id', id);
 
+  taskInput.value = '';
   loadTasks();
 }
 
