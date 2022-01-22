@@ -5,7 +5,7 @@ const ulTasks = document.querySelector('#ul-tasks');
 const taskInput = document.querySelector('#task');
 
 const sendTaskObject = taskObject => {
-  taskObject.id = id;
+  taskObject.id = Number(id);
   id++;
   tasks.push(taskObject);
   localStorage.setItem('tasks', JSON.stringify(tasks));
