@@ -1,2 +1,2 @@
 # todo-list
-Meu aplicativo de listas de tarefas
+Meu aplicativo de lista de tarefas
