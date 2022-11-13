@@ -1,0 +1,87 @@
+:root {
+  --color-one: #008cff;
+  --color-two: #00a2ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #eee;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  flex-direction: column;
+}
+
+input {
+  padding: 15px;
+  border: 2px solid #d3d3d3;
+  font-size: 12pt;
+  outline: none;
+  width: 250px;
+  transition: all .3s;
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 2px solid var(--color-one);
+}
+
+.btn {
+  border: none;
+  background-color: var(--color-one);
+  color: white;
+  cursor: pointer;
+  padding: 17px;
+  width: 100px;
+}
+
+.btn:focus {
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--color-two);
+}
+
+.max-characters {
+  color: red;
+  display: none;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+li {
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  margin: 10px 0;
+}
+
+li > span {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--color-one);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+li > span:hover {
+  background-color: var(--color-one);
+}
