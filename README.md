@@ -8,4 +8,4 @@ Meu aplicativo de lista de tarefas
   - Git
 
 # Experimente
-[Ir para Todo List](todolist.danieldejesus.online)
+[Ir para Todo List](http://todolist.danieldejesus.online/)
