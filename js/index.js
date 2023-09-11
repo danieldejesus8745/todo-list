@@ -25,14 +25,6 @@ form.addEventListener('submit', e => {
   addTask(task);
 });
 
-description.addEventListener('keyup', e => {
-  if (e.target.value.length >= 25) {
-    maxCharacters.style.display = 'block';
-  } else {
-    maxCharacters.style.display = 'none';
-  }
-});
-
 function loadTasks() {
   ulTasks.textContent = '';
 
@@ -43,14 +35,22 @@ function loadTasks() {
   } else {
     tasks.map(task => {
       const li = document.createElement('li');
-      const p = document.createElement('p');
-      const span = document.createElement('span');
+      const divRightSide = document.createElement('div');
+      const divLeftSide = document.createElement('div');
+      const paragraphDescription = document.createElement('p');
+      const buttonDone = document.createElement('button');
 
-      p.textContent = task.description;
+      divRightSide.classList.add('right-side');
+      divLeftSide.classList.add('left-side');
+      buttonDone.classList.add('done-button');
 
-      span.setAttribute('onclick', `removeTask(${task.id})`);
-      
-      li.append(p, span);
+      paragraphDescription.textContent = task.description;
+
+      buttonDone.setAttribute('onclick', `removeTask(${task.id})`);
+
+      divRightSide.append(paragraphDescription);
+      divLeftSide.append(buttonDone);
+      li.append(divRightSide, divLeftSide);
       ulTasks.append(li);
     });
   }

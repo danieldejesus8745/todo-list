@@ -54,11 +54,6 @@ input:focus {
   background-color: var(--color-two);
 }
 
-.max-characters {
-  color: red;
-  display: none;
-}
-
 ul {
   list-style: none;
   margin-top: 20px;
@@ -66,22 +61,33 @@ ul {
 
 li {
   width: 350px;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #eee;
-  margin: 10px 0;
+  padding: 10px 0 10px 10px;
+  margin: 20px 0;
+  border-bottom: 1px solid lightgray;
 }
 
-li > span {
+.right-side {
+  width: 300px;
+}
+
+.left-side {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.done-button {
   width: 20px;
   height: 20px;
+  border-radius: 100%;
+  background: none;
   border: 3px solid var(--color-one);
-  border-radius: 50%;
   cursor: pointer;
-  transition: all .3s;
 }
 
-li > span:hover {
-  background-color: var(--color-one);
+.done-button:hover {
+  background-color: var(--color-two);
 }
