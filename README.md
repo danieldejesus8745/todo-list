@@ -8,4 +8,4 @@ Meu aplicativo de lista de tarefas
   - Git
 
 # Experimente
-[Ir para Todo List](https://danieldejesus8745.github.io/todo-list/){:target="_blank"}
+[Ir para Todo List](https://danieldejesus8745.github.io/todo-list/)
